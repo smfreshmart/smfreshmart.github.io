@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S M Fresh Mart | Freshness You Can Trust | RT Nagar, Bengaluru</title><meta name="description" content="S M Fresh Mart (formerly S M Food Palace) is a supermarket on Sultanpalya Main Road, RT Nagar, Bengaluru. Fresh vegetables, groceries, dairy and WhatsApp ordering. Open daily 7 AM to 10 PM.">
+<link rel="canonical" href="https://smfreshmart.github.io/">
+<meta property="og:title" content="S M Fresh Mart | RT Nagar, Bengaluru">
+<meta property="og:description" content="Fresh groceries and daily essentials on Sultanpalya Main Road. Order via WhatsApp.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://smfreshmart.github.io/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GroceryStore",
+  "name": "S M Fresh Mart",
+  "alternateName": "S M Food Palace",
+  "url": "https://smfreshmart.github.io/",
+  "telephone": "+918023339002",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Sultanpalya Main Rd, RT Nagar",
+    "addressLocality": "Bengaluru",
+    "addressRegion": "Karnataka",
+    "postalCode": "560032",
+    "addressCountry": "IN"
+  },
+  "openingHours": "Mo-Su 07:00-22:00"
+}
+</script>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter & Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065f46',
+                        },
+                        amber: {
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        @keyframes pulse-subtle {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+        .animate-pulse-subtle {
+            animation: pulse-subtle 3s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased pb-20 md:pb-0">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-brand-700 text-white text-xs md:text-sm py-2 px-4 shadow-inner">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
+            <div class="flex items-center gap-2 font-medium">
+                <span class="bg-amber-500 text-slate-900 text-xs px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">Note</span>
+                <span>Formerly <strong>S M Food Palace</strong> — Same Trusted Quality, Fresh New Name!</span>
+            </div>
+            <div class="flex items-center gap-4 text-xs">
+                <span class="flex items-center gap-1"><i class="fa-regular fa-clock text-amber-400"></i> Open Daily: 7 AM – 10 PM</span>
+                <span class="hidden md:inline-flex items-center gap-1"><i class="fa-solid fa-location-dot text-amber-400"></i> Sultanpalya Main Rd, RT Nagar</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#home" onclick="showTab('home')" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 bg-gradient-to-br from-brand-500 to-brand-700 rounded-2xl flex items-center justify-center text-white text-2xl font-black shadow-md group-hover:scale-105 transition-transform">
+                    SM
+                </div>
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="font-heading font-extrabold text-xl md:text-2xl text-slate-900 tracking-tight">S M FRESH MART</span>
+                    </div>
+                    <p class="text-xs text-brand-600 font-semibold tracking-wide uppercase">Freshness You Can Trust</p>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-slate-600 text-sm">
+                <button onclick="showTab('home')" class="nav-btn transition-colors hover:text-brand-600 active-nav text-brand-600 font-semibold" data-tab="home">Home</button>
+                <button onclick="showTab('categories')" class="nav-btn transition-colors hover:text-brand-600" data-tab="categories">Aisles & Categories</button>
+                <button onclick="showTab('order-builder')" class="nav-btn transition-colors hover:text-brand-600 flex items-center gap-1.5" data-tab="order-builder">
+                    <i class="fa-solid fa-cart-shopping text-brand-500"></i> WhatsApp Quick Order
+                </button>
+                <button onclick="showTab('offers')" class="nav-btn transition-colors hover:text-brand-600 flex items-center gap-1" data-tab="offers">
+                    <span class="inline-block w-2 h-2 rounded-full bg-amber-500 animate-ping"></span> Daily Deals
+                </button>
+                <button onclick="showTab('about')" class="nav-btn transition-colors hover:text-brand-600" data-tab="about">About Us</button>
+                <button onclick="showTab('contact')" class="nav-btn transition-colors hover:text-brand-600" data-tab="contact">Visit & Store Info</button>
+            </nav>
+
+            <!-- Desktop Action CTAs -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="tel:08023339002" class="px-4 py-2.5 rounded-xl border border-slate-300 text-slate-700 hover:bg-slate-50 font-semibold text-sm transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-phone text-brand-600"></i> 080 2333 9002
+                </a>
+                <button onclick="showTab('order-builder')" class="px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm shadow-md shadow-brand-500/20 transition-all flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Quick Order
+                    <span id="nav-cart-badge" class="bg-amber-400 text-slate-900 text-xs font-extrabold px-2 py-0.5 rounded-full hidden">0</span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-toggle" class="lg:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown Navigation -->
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-100 bg-white px-4 pt-3 pb-6 space-y-3">
+            <button onclick="showTab('home'); toggleMobileMenu()" class="block w-full text-left py-2 font-medium text-slate-700 border-b border-slate-100">Home</button>
+            <button onclick="showTab('categories'); toggleMobileMenu()" class="block w-full text-left py-2 font-medium text-slate-700 border-b border-slate-100">Categories & Essentials</button>
+            <button onclick="showTab('order-builder'); toggleMobileMenu()" class="block w-full text-left py-2 font-medium text-slate-700 border-b border-slate-100 flex justify-between items-center">
+                <span><i class="fa-brands fa-whatsapp text-brand-600 mr-2"></i> WhatsApp Quick Order</span>
+                <span id="mobile-cart-badge" class="bg-amber-400 text-slate-900 text-xs font-bold px-2 py-0.5 rounded-full hidden">0 items</span>
+            </button>
+            <button onclick="showTab('offers'); toggleMobileMenu()" class="block w-full text-left py-2 font-medium text-slate-700 border-b border-slate-100">Daily Deals & Offers</button>
+            <button onclick="showTab('about'); toggleMobileMenu()" class="block w-full text-left py-2 font-medium text-slate-700 border-b border-slate-100">About S M Fresh Mart</button>
+            <button onclick="showTab('contact'); toggleMobileMenu()" class="block w-full text-left py-2 font-medium text-slate-700">Location & Hours</button>
+            
+            <div class="pt-2 flex flex-col gap-2">
+                <a href="tel:08023339002" class="w-full text-center py-2.5 rounded-xl border border-slate-300 text-slate-800 font-semibold text-sm">
+                    <i class="fa-solid fa-phone mr-2 text-brand-600"></i> Call 080 2333 9002
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN TAB CONTENT CONTAINER -->
+    <main class="min-h-screen">
+
+        <!-- ================= HOMEPAGE TAB ================= -->
+        <div id="tab-home" class="tab-content">
+            <!-- Hero Section -->
+            <section class="relative bg-gradient-to-b from-brand-50 via-white to-slate-50 pt-8 pb-16 md:pt-16 md:pb-24 overflow-hidden">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid lg:grid-cols-12 gap-12 items-center">
+                        <!-- Left Content Column -->
+                        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                            <div class="inline-flex items-center gap-2 bg-brand-100/80 border border-brand-200 text-brand-800 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold">
+                                <span class="flex h-2 w-2 rounded-full bg-brand-500"></span>
+                                RT Nagar & Hebbal’s Favorite Supermarket
+                            </div>
+                            
+                            <h1 class="font-heading text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                                Fresh Grocery & Daily Essentials <span class="text-brand-600 underline decoration-amber-400 decoration-wavy decoration-2">Right Next Door</span>
+                            </h1>
+                            
+                            <p class="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                                Formerly known as <strong>S M Food Palace</strong>. Experience farm-fresh produce, branded staples, dairy, personal care, and gourmet snacks — all under one roof on Sultanpalya Main Road.
+                            </p>
+
+                            <!-- Social Proof Bar -->
+                            <div class="pt-2 pb-2 flex flex-wrap justify-center lg:justify-start items-center gap-4 text-sm font-medium text-slate-700">
+                                <div class="flex items-center gap-1.5 bg-white shadow-sm border border-slate-200 px-3 py-1.5 rounded-xl">
+                                    <div class="flex text-amber-500 text-xs">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                    </div>
+                                    <span class="font-bold text-slate-900">4.1★</span>
+                                    <span class="text-slate-500 text-xs">(1,900+ Google Reviews)</span>
+                                </div>
+                                <div class="flex items-center gap-1.5 text-brand-700 font-semibold">
+                                    <i class="fa-solid fa-truck-fast text-brand-500"></i> Express Neighborhood Delivery
+                                </div>
+                            </div>
+
+                            <!-- Primary Action Buttons -->
+                            <div class="pt-2 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                                <a href="https://wa.me/918023339002?text=Hi%20S%20M%20Fresh%20Mart%2C%20I%27d%20like%20to%20place%20a%20grocery%20order.%20Please%20share%20the%20next%20steps." target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-2xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-base shadow-lg shadow-brand-500/30 hover:shadow-xl transition-all flex items-center justify-center gap-3 group">
+                                    <i class="fa-brands fa-whatsapp text-xl group-hover:scale-110 transition-transform"></i>
+                                    Order via WhatsApp
+                                </a>
+                                <a href="https://maps.google.com/?q=S+M+Fresh+Mart+Sultanpalya+Main+Rd+RT+Nagar+Bengaluru" target="_blank" rel="noopener" class="px-8 py-4 rounded-2xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-base shadow-md transition-all flex items-center justify-center gap-2">
+                                    <i class="fa-solid fa-diamond-turn-right text-amber-400"></i>
+                                    Get Store Directions
+                                </a>
+                            </div>
+
+                            <!-- Quick Badges -->
+                            <div class="pt-4 grid grid-cols-3 gap-2 border-t border-slate-200/80 text-slate-600 text-xs sm:text-sm font-medium">
+                                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-1 sm:gap-2">
+                                    <i class="fa-solid fa-apple-whole text-brand-500 text-base"></i>
+                                    <span>Fresh Produce Daily</span>
+                                </div>
+                                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-1 sm:gap-2">
+                                    <i class="fa-solid fa-shield-halved text-brand-500 text-base"></i>
+                                    <span>Quality Verified</span>
+                                </div>
+                                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-1 sm:gap-2">
+                                    <i class="fa-solid fa-indian-rupee-sign text-brand-500 text-base"></i>
+                                    <span>Super Market Pricing</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Visual Card Showcase -->
+                        <div class="lg:col-span-5 relative">
+                            <div class="relative mx-auto max-w-md lg:max-w-none rounded-3xl bg-white p-3 shadow-2xl border border-slate-100">
+                                <div class="relative h-80 sm:h-96 rounded-2xl overflow-hidden bg-slate-900">
+                                    <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1000&q=80" alt="S M Fresh Mart Supermarket Aisles" class="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+                                    
+                                    <!-- Store Status Badge Overlay -->
+                                    <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-2 text-xs font-bold text-slate-900">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                                        Open Today · 7:00 AM – 10:00 PM
+                                    </div>
+
+                                    <!-- Bottom Info Overlay -->
+                                    <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-slate-900/80 backdrop-blur-md border border-white/10 text-white">
+                                        <div class="flex justify-between items-center mb-1">
+                                            <h3 class="font-heading font-bold text-base text-amber-300">S M Fresh Mart</h3>
+                                            <span class="text-xs bg-brand-600 px-2 py-0.5 rounded font-medium">Verified Store</span>
+                                        </div>
+                                        <p class="text-xs text-slate-300 flex items-center gap-1">
+                                            <i class="fa-solid fa-location-dot text-amber-400"></i> Sultanpalya Main Rd, RT Nagar, Bengaluru
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Decorative Floating Elements -->
+                            <div class="hidden sm:flex absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 items-center gap-3 animate-pulse-subtle">
+                                <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center font-bold">
+                                    <i class="fa-solid fa-basket-shopping text-lg"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-500 font-medium">In-Store Stock</p>
+                                    <p class="text-sm font-bold text-slate-900">5,000+ Items Available</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Interactive Delivery Zone Checker Banner -->
+            <section class="bg-brand-60 py-10 border-y border-brand-100">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-brand-100 max-w-4xl mx-auto">
+                        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                            <div class="space-y-1 text-center md:text-left">
+                                <span class="text-xs font-bold text-brand-600 uppercase tracking-widest">Home Delivery Checker</span>
+                                <h3 class="font-heading font-bold text-xl text-slate-900">Do you live near RT Nagar or Hebbal?</h3>
+                                <p class="text-slate-600 text-sm">Check if your area is eligible for fast doorstep delivery from S M Fresh Mart.</p>
+                            </div>
+                            <div class="w-full md:w-auto flex flex-col sm:flex-row gap-2">
+                                <div class="relative">
+                                    <i class="fa-solid fa-location-crosshairs absolute left-3.5 top-3.5 text-slate-400"></i>
+                                    <input type="text" id="area-search-input" placeholder="Enter locality (e.g., RT Nagar, Hebbal)" class="pl-10 pr-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:outline-none w-full sm:w-64 text-sm">
+                                </div>
+                                <button onclick="checkDeliveryZone()" class="px-6 py-3 bg-brand-600 hover:bg-brand-700 text-white font-semibold rounded-xl text-sm transition-all shadow-md">
+                                    Check Area
+                                </button>
+                            </div>
+                        </div>
+                        <div id="zone-result-message" class="mt-4 hidden text-sm font-semibold p-3 rounded-xl"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Categories Highlights -->
+            <section class="py-16 bg-slate-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                        <div>
+                            <span class="text-brand-600 font-bold text-xs uppercase tracking-widest">Aisle Highlights</span>
+                            <h2 class="font-heading font-extrabold text-2xl md:text-3xl text-slate-900">Everything Your Kitchen & Home Needs</h2>
+                        </div>
+                        <button onclick="showTab('categories')" class="text-brand-600 hover:text-brand-700 font-semibold text-sm flex items-center gap-1 group">
+                            Explore All Aisles <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+                        <!-- Category Card 1 -->
+                        <div onclick="showTab('categories')" class="cursor-pointer group bg-white rounded-2xl p-4 shadow-sm hover:shadow-md border border-slate-200/80 transition-all text-center">
+                            <div class="w-14 h-14 mx-auto mb-3 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-carrot"></i>
+                            </div>
+                            <h3 class="font-bold text-slate-900 text-sm">Fresh Farm Produce</h3>
+                            <p class="text-xs text-slate-500 mt-1">Vegetables & Fruits</p>
+                        </div>
+                        <!-- Category Card 2 -->
+                        <div onclick="showTab('categories')" class="cursor-pointer group bg-white rounded-2xl p-4 shadow-sm hover:shadow-md border border-slate-200/80 transition-all text-center">
+                            <div class="w-14 h-14 mx-auto mb-3 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-cow"></i>
+                            </div>
+                            <h3 class="font-bold text-slate-900 text-sm">Dairy & Bakery</h3>
+                            <p class="text-xs text-slate-500 mt-1">Milk, Paneer, Breads</p>
+                        </div>
+                        <!-- Category Card 3 -->
+                        <div onclick="showTab('categories')" class="cursor-pointer group bg-white rounded-2xl p-4 shadow-sm hover:shadow-md border border-slate-200/80 transition-all text-center">
+                            <div class="w-14 h-14 mx-auto mb-3 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-bowl-rice"></i>
+                            </div>
+                            <h3 class="font-bold text-slate-900 text-sm">Rice, Atta & Pulses</h3>
+                            <p class="text-xs text-slate-500 mt-1">Staples & Oils</p>
+                        </div>
+                        <!-- Category Card 4 -->
+                        <div onclick="showTab('categories')" class="cursor-pointer group bg-white rounded-2xl p-4 shadow-sm hover:shadow-md border border-slate-200/80 transition-all text-center">
+                            <div class="w-14 h-14 mx-auto mb-3 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-cookie-bite"></i>
+                            </div>
+                            <h3 class="font-bold text-slate-900 text-sm">Snacks & Beverages</h3>
+                            <p class="text-xs text-slate-500 mt-1">Biscuits, Juices, Tea</p>
+                        </div>
+                        <!-- Category Card 5 -->
+                        <div onclick="showTab('categories')" class="cursor-pointer group bg-white rounded-2xl p-4 shadow-sm hover:shadow-md border border-slate-200/80 transition-all text-center">
+                            <div class="w-14 h-14 mx-auto mb-3 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-soap"></i>
+                            </div>
+                            <h3 class="font-bold text-slate-900 text-sm">Household Essentials</h3>
+                            <p class="text-xs text-slate-500 mt-1">Detergents & Cleaners</p>
+                        </div>
+                        <!-- Category Card 6 -->
+                        <div onclick="showTab('categories')" class="cursor-pointer group bg-white rounded-2xl p-4 shadow-sm hover:shadow-md border border-slate-200/80 transition-all text-center">
+                            <div class="w-14 h-14 mx-auto mb-3 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-sparkles"></i>
+                            </div>
+                            <h3 class="font-bold text-slate-900 text-sm">Personal Care</h3>
+                            <p class="text-xs text-slate-500 mt-1">Soaps & Hair Care</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why Choose Us / Trust Pillars Section -->
+            <section class="py-16 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-2xl mx-auto mb-12">
+                        <span class="text-brand-600 font-bold text-xs uppercase tracking-widest">Neighborhood Trust</span>
+                        <h2 class="font-heading font-extrabold text-3xl text-slate-900 mt-1">Why Sultanpalya & RT Nagar Choose S M Fresh Mart</h2>
+                    </div>
+
+                    <div class="grid md:grid-cols-4 gap-6">
+                        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/60">
+                            <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center text-xl font-bold mb-4">
+                                <i class="fa-solid fa-leaf"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-900 mb-2">Daily Fresh Harvest</h3>
+                            <p class="text-slate-600 text-sm">Fresh fruits and green leafy vegetables sourced directly every morning.</p>
+                        </div>
+
+                        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/60">
+                            <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl font-bold mb-4">
+                                <i class="fa-solid fa-boxes-packing"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-900 mb-2">Massive Variety</h3>
+                            <p class="text-slate-600 text-sm">From local staples to premium packed gourmet brands — all under one single roof.</p>
+                        </div>
+
+                        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/60">
+                            <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center text-xl font-bold mb-4">
+                                <i class="fa-solid fa-hand-holding-dollar"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-900 mb-2">Honest Pricing</h3>
+                            <p class="text-slate-600 text-sm">Genuine MRP discounts, combo offers, and transparent weighing guaranteed.</p>
+                        </div>
+
+                        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/60">
+                            <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center text-xl font-bold mb-4">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-900 mb-2">Community First</h3>
+                            <p class="text-slate-600 text-sm">Serving Bengaluru families for years with friendly, personal, and polite service.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Google Reviews & Social Proof Section -->
+            <section class="py-16 bg-slate-900 text-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex flex-col md:flex-row items-center justify-between mb-12 gap-6">
+                        <div>
+                            <div class="inline-flex items-center gap-2 text-amber-400 text-sm font-semibold mb-2">
+                                <i class="fa-brands fa-google text-lg"></i> Verified Customer Feedback
+                            </div>
+                            <h2 class="font-heading font-extrabold text-3xl">Loved by 1,900+ Local Shoppers</h2>
+                            <p class="text-slate-400 text-sm mt-1">Real reviews from residents in RT Nagar, Dinnur, and Kaval Bairasandra.</p>
+                        </div>
+                        <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700 flex items-center gap-4">
+                            <div class="text-4xl font-extrabold text-amber-400">4.1</div>
+                            <div>
+                                <div class="flex text-amber-400 text-sm">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                </div>
+                                <span class="text-xs text-slate-300 font-medium">1,900+ Google Ratings</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reviews Carousel/Grid -->
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <!-- Review 1 -->
+                        <div class="bg-slate-800/80 p-6 rounded-2xl border border-slate-700 relative">
+                            <div class="flex text-amber-400 text-xs mb-3">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                                "S M Fresh Mart (we still call it Food Palace out of habit!) is our go-to spot on Sultanpalya Main Road. Vegetables are extremely fresh in the morning and staff is very helpful."
+                            </p>
+                            <div class="flex items-center gap-3">
+                                <div class="w-9 h-9 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center text-sm">
+                                    RK
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm text-white">Ramesh Kumar</h4>
+                                    <p class="text-xs text-slate-400">RT Nagar Resident</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 2 -->
+                        <div class="bg-slate-800/80 p-6 rounded-2xl border border-slate-700 relative">
+                            <div class="flex text-amber-400 text-xs mb-3">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                                "Super quick WhatsApp delivery! I sent my list on WhatsApp and got everything delivered near Dinnur in less than 30 minutes. Very reliable local supermarket."
+                            </p>
+                            <div class="flex items-center gap-3">
+                                <div class="w-9 h-9 rounded-full bg-amber-500 text-slate-900 font-bold flex items-center justify-center text-sm">
+                                    AP
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm text-white">Ananya Patel</h4>
+                                    <p class="text-xs text-slate-400">Hebbal / Sultanpalya</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 3 -->
+                        <div class="bg-slate-800/80 p-6 rounded-2xl border border-slate-700 relative">
+                            <div class="flex text-amber-400 text-xs mb-3">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                                "Great variety of branded groceries, spices, and snacks. Billing is fast even during peak evening hours. Parking space right near the store entrance is convenient."
+                            </p>
+                            <div class="flex items-center gap-3">
+                                <div class="w-9 h-9 rounded-full bg-blue-500 text-white font-bold flex items-center justify-center text-sm">
+                                    SY
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm text-white">Syed Yaseen</h4>
+                                    <p class="text-xs text-slate-400">Kaval Bairasandra</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ================= CATEGORIES TAB ================= -->
+        <div id="tab-categories" class="tab-content hidden py-10 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-10">
+                    <span class="text-brand-600 font-bold text-xs uppercase tracking-widest">Store Aisles</span>
+                    <h1 class="font-heading font-extrabold text-3xl text-slate-900">Explore Our Supermarket Aisles</h1>
+                    <p class="text-slate-600 text-sm mt-2">Browse our wide selection or add items directly to your WhatsApp order list.</p>
+                </div>
+
+                <!-- Category Filter Buttons -->
+                <div class="flex flex-wrap justify-center gap-2 mb-8" id="category-filter-buttons">
+                    <button data-filter="all" onclick="filterCategory('all')" class="cat-filter-btn active px-4 py-2 rounded-xl text-sm font-semibold bg-brand-600 text-white shadow-sm">All Essentials</button>
+                    <button data-filter="produce" onclick="filterCategory('produce')" class="cat-filter-btn px-4 py-2 rounded-xl text-sm font-semibold bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">Fresh Fruits & Veggies</button>
+                    <button data-filter="staples" onclick="filterCategory('staples')" class="cat-filter-btn px-4 py-2 rounded-xl text-sm font-semibold bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">Rice, Atta & Oil</button>
+                    <button data-filter="dairy" onclick="filterCategory('dairy')" class="cat-filter-btn px-4 py-2 rounded-xl text-sm font-semibold bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">Dairy & Breakfast</button>
+                    <button data-filter="snacks" onclick="filterCategory('snacks')" class="cat-filter-btn px-4 py-2 rounded-xl text-sm font-semibold bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">Snacks & Beverages</button>
+                </div>
+
+                <!-- Product List Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="products-grid">
+                    <!-- Products rendered via JS -->
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= WHATSAPP ORDER BUILDER TAB ================= -->
+        <div id="tab-order-builder" class="tab-content hidden py-10 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-10">
+                    <div class="inline-flex items-center gap-2 bg-emerald-100 text-brand-800 px-3 py-1 rounded-full text-xs font-bold mb-2">
+                        <i class="fa-brands fa-whatsapp text-emerald-600 text-base"></i> Fast Local Shopping
+                    </div>
+                    <h1 class="font-heading font-extrabold text-3xl text-slate-900">WhatsApp Grocery Quick Order</h1>
+                    <p class="text-slate-600 text-sm mt-1">Select your daily items below, review your total estimate, and click to send your formatted list directly to our store WhatsApp!</p>
+                </div>
+
+                <div class="grid lg:grid-cols-12 gap-8 items-start">
+                    <!-- Left: Item Picker & Search -->
+                    <div class="lg:col-span-7 bg-white rounded-3xl p-6 shadow-md border border-slate-200">
+                        <div class="flex flex-col sm:flex-row justify-between items-center gap-4 mb-6">
+                            <h2 class="font-bold text-lg text-slate-900">Add Items to Your List</h2>
+                            <div class="relative w-full sm:w-64">
+                                <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-slate-400 text-sm"></i>
+                                <input type="text" id="cart-search-input" onkeyup="searchCartItems()" placeholder="Search item (e.g. Rice, Milk)..." class="w-full pl-9 pr-3 py-2 text-sm border border-slate-300 rounded-xl focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                            </div>
+                        </div>
+
+                        <div class="space-y-3 max-h-[500px] overflow-y-auto pr-2 custom-scrollbar" id="cart-item-picker-list">
+                            <!-- Items populated by JS -->
+                        </div>
+                    </div>
+
+                    <!-- Right: Cart Summary & WhatsApp Form -->
+                    <div class="lg:col-span-5 bg-white rounded-3xl p-6 shadow-xl border border-brand-100 sticky top-24">
+                        <div class="flex items-center justify-between pb-4 border-b border-slate-200 mb-4">
+                            <h2 class="font-heading font-bold text-lg text-slate-900 flex items-center gap-2">
+                                <i class="fa-solid fa-basket-shopping text-brand-600"></i>
+                                Your Order Summary
+                            </h2>
+                            <span id="cart-item-count" class="bg-brand-100 text-brand-800 text-xs font-bold px-2.5 py-1 rounded-full">0 Items</span>
+                        </div>
+
+                        <!-- Selected Items Container -->
+                        <div id="cart-selected-list" class="space-y-3 min-h-[120px] max-h-[220px] overflow-y-auto custom-scrollbar mb-4 text-sm">
+                            <div class="text-center py-8 text-slate-400">
+                                <i class="fa-solid fa-cart-flatbed text-3xl mb-2 text-slate-300"></i>
+                                <p class="text-xs">Your grocery list is empty.<br>Click '+' on items on the left to add!</p>
+                            </div>
+                        </div>
+
+                        <!-- Price Total -->
+                        <div class="pt-3 border-t border-slate-200 space-y-2 mb-6">
+                            <div class="flex justify-between text-slate-600 text-sm">
+                                <span>Estimated Total:</span>
+                                <span class="font-bold text-slate-900" id="cart-estimated-total">₹0</span>
+                            </div>
+                            <p class="text-xs text-slate-500">*Final bill may vary slightly based on exact produce weights during store packing.</p>
+                        </div>
+
+                        <!-- Delivery / Customer Form Inputs -->
+                        <div class="space-y-3 mb-6">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Your Name *</label>
+                                <input type="text" id="cust-name" placeholder="e.g. Priya Sharma" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-xl focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Delivery Address / Locality *</label>
+                                <input type="text" id="cust-address" placeholder="e.g. Flat 302, Sultanpalya Main Rd, RT Nagar" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-xl focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Special Notes (Optional)</label>
+                                <input type="text" id="cust-notes" placeholder="e.g. Send ripe bananas / call before arrival" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-xl focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                            </div>
+                        </div>
+
+                        <!-- Action Button -->
+                        <button onclick="sendWhatsAppOrder()" class="w-full py-3.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-lg shadow-emerald-600/30 transition-all flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            Send Order on WhatsApp Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= OFFERS TAB ================= -->
+        <div id="tab-offers" class="tab-content hidden py-10 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-10">
+                    <span class="inline-block bg-amber-100 text-amber-800 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider mb-2">Neighborhood Deals</span>
+                    <h1 class="font-heading font-extrabold text-3xl text-slate-900">Today's Special Offers & Savings</h1>
+                    <p class="text-slate-600 text-sm mt-1">Exclusive daily discounts available for in-store pickup and WhatsApp orders.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Offer 1 -->
+                    <div class="bg-white rounded-3xl p-6 shadow-md border border-amber-200 relative overflow-hidden flex flex-col justify-between">
+                        <div class="absolute -right-12 -top-12 w-28 h-28 bg-amber-400 rotate-45 flex items-end justify-center pb-2 text-xs font-bold text-slate-900">
+                            15% OFF
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-brand-600 uppercase tracking-wider">Produce Combo</span>
+                            <h3 class="font-heading font-bold text-xl text-slate-900 mt-1 mb-2">Weekly Veggie Basket</h3>
+                            <p class="text-slate-600 text-sm mb-4">Includes Potato (1kg), Onion (1kg), Tomato (1kg), Green Chillies & Coriander set.</p>
+                        </div>
+                        <div>
+                            <div class="flex items-baseline gap-2 mb-4">
+                                <span class="text-2xl font-extrabold text-slate-900">₹149</span>
+                                <span class="text-slate-400 line-through text-sm">₹180</span>
+                            </div>
+                            <button onclick="showTab('order-builder')" class="w-full py-2.5 bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm rounded-xl transition-all">Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <!-- Offer 2 -->
+                    <div class="bg-white rounded-3xl p-6 shadow-md border border-brand-200 relative overflow-hidden flex flex-col justify-between">
+                        <div class="absolute -right-12 -top-12 w-28 h-28 bg-brand-500 rotate-45 flex items-end justify-center pb-2 text-xs font-bold text-white">
+                            BESTSELLER
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-brand-600 uppercase tracking-wider">Staples Saver</span>
+                            <h3 class="font-heading font-bold text-xl text-slate-900 mt-1 mb-2">Sona Masoori Rice (10kg)</h3>
+                            <p class="text-slate-600 text-sm mb-4">Premium aged raw rice. Perfectly clean grains for daily home cooked meals.</p>
+                        </div>
+                        <div>
+                            <div class="flex items-baseline gap-2 mb-4">
+                                <span class="text-2xl font-extrabold text-slate-900">₹580</span>
+                                <span class="text-slate-400 line-through text-sm">₹650</span>
+                            </div>
+                            <button onclick="showTab('order-builder')" class="w-full py-2.5 bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm rounded-xl transition-all">Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <!-- Offer 3 -->
+                    <div class="bg-white rounded-3xl p-6 shadow-md border border-slate-200 relative overflow-hidden flex flex-col justify-between">
+                        <div class="absolute -right-12 -top-12 w-28 h-28 bg-blue-500 rotate-45 flex items-end justify-center pb-2 text-xs font-bold text-white">
+                            DAIRY SPECIAL
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-brand-600 uppercase tracking-wider">Breakfast Essentials</span>
+                            <h3 class="font-heading font-bold text-xl text-slate-900 mt-1 mb-2">Fresh Paneer & Butter Pack</h3>
+                            <p class="text-slate-600 text-sm mb-4">200g Fresh Dairy Paneer + 100g Amul Salted Butter bundle discount.</p>
+                        </div>
+                        <div>
+                            <div class="flex items-baseline gap-2 mb-4">
+                                <span class="text-2xl font-extrabold text-slate-900">₹135</span>
+                                <span class="text-slate-400 line-through text-sm">₹155</span>
+                            </div>
+                            <button onclick="showTab('order-builder')" class="w-full py-2.5 bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm rounded-xl transition-all">Order via WhatsApp</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= ABOUT US TAB ================= -->
+        <div id="tab-about" class="tab-content hidden py-10 bg-white">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+                <div class="text-center max-w-2xl mx-auto">
+                    <span class="text-brand-600 font-bold text-xs uppercase tracking-widest">Our Heritage</span>
+                    <h1 class="font-heading font-extrabold text-3xl text-slate-900 mt-1">Serving Sultanpalya & RT Nagar with Pride</h1>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="space-y-4 text-slate-600 leading-relaxed text-sm md:text-base">
+                        <p>
+                            Formerly widely known as <strong>S M Food Palace</strong>, <strong>S M Fresh Mart</strong> has been a trusted neighborhood anchor for thousands of families living in RT Nagar, Dinnur, Kaval Bairasandra, and Hebbal.
+                        </p>
+                        <p>
+                            Our rebranding to <em>S M Fresh Mart</em> reflects our ongoing commitment to bringing you the freshest farm produce, expanded organic ranges, and modern neighborhood shopping convenience — while maintaining the exact same warmth, fair pricing, and personal care you've relied on for years.
+                        </p>
+                        <p>
+                            Whether you step into our brightly lit Sultanpalya store or order via WhatsApp, we treat every customer like family.
+                        </p>
+                    </div>
+
+                    <div class="bg-brand-50 p-6 rounded-3xl border border-brand-100 space-y-4">
+                        <h3 class="font-heading font-bold text-xl text-brand-900">Our Promises to You</h3>
+                        <ul class="space-y-3 text-sm text-slate-700">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-brand-600 mt-1"></i>
+                                <span><strong>Daily Freshness:</strong> Vegetables and fruits restocked every single morning.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-brand-600 mt-1"></i>
+                                <span><strong>Guaranteed Genuine Brands:</strong> 100% authentic packaged goods with long shelf lives.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-brand-600 mt-1"></i>
+                                <span><strong>Prompt Home Delivery:</strong> Rapid delivery right to your apartment doorstep.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= CONTACT & MAP TAB ================= -->
+        <div id="tab-contact" class="tab-content hidden py-10 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-10">
+                    <span class="text-brand-600 font-bold text-xs uppercase tracking-widest">Visit Us</span>
+                    <h1 class="font-heading font-extrabold text-3xl text-slate-900">Store Location & Contact Info</h1>
+                    <p class="text-slate-600 text-sm mt-1">Conveniently located on Sultanpalya Main Road with easy parking accessibility.</p>
+                </div>
+
+                <div class="grid lg:grid-cols-12 gap-8 items-start">
+                    <!-- Store Details Info -->
+                    <div class="lg:col-span-5 bg-white p-6 rounded-3xl shadow-md border border-slate-200 space-y-6">
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-sm">Store Address</h4>
+                                    <p class="text-slate-600 text-sm mt-0.5">Sultanpalya Main Rd, RT Nagar, Dinnur, Kaval Bairasandra, Bengaluru, Karnataka 560032</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-sm">Operating Hours</h4>
+                                    <p class="text-slate-600 text-sm mt-0.5">Open Daily: 7:00 AM – 10:00 PM</p>
+                                    <span class="inline-block mt-1 text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">Open Today</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-sm">Phone Hotline</h4>
+                                    <p class="text-slate-600 text-sm mt-0.5"><a href="tel:08023339002" class="hover:text-brand-600 font-semibold">080 2333 9002</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-slate-200 space-y-3">
+                            <a href="https://maps.google.com/?q=S+M+Fresh+Mart+Sultanpalya+Main+Rd+RT+Nagar+Bengaluru" target="_blank" rel="noopener" class="w-full py-3 bg-slate-900 hover:bg-slate-800 text-white font-semibold rounded-xl text-sm flex items-center justify-center gap-2 transition-all">
+                                <i class="fa-solid fa-map-location-dot text-amber-400"></i> Open in Google Maps
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Map Simulation Visual -->
+                    <div class="lg:col-span-7 bg-white p-4 rounded-3xl shadow-md border border-slate-200">
+                        <div class="w-full h-96 rounded-2xl bg-slate-100 relative overflow-hidden flex items-center justify-center border border-slate-200">
+                            <!-- Simulated Google Maps Placeholder -->
+                            <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1000&q=80" alt="Map View Sultanpalya RT Nagar" class="w-full h-full object-cover opacity-80">
+                            <div class="absolute inset-0 bg-slate-900/30 backdrop-blur-[2px]"></div>
+                            
+                            <div class="absolute bg-white p-4 rounded-2xl shadow-2xl text-center max-w-xs border border-slate-200">
+                                <div class="w-10 h-10 rounded-full bg-brand-600 text-white mx-auto mb-2 flex items-center justify-center text-lg font-extrabold shadow-md">
+                                    SM
+                                </div>
+                                <h4 class="font-bold text-slate-900 text-sm">S M Fresh Mart</h4>
+                                <p class="text-xs text-slate-500 mb-3">Sultanpalya Main Road, RT Nagar</p>
+                                <a href="https://maps.google.com/?q=S+M+Fresh+Mart+Sultanpalya+Main+Rd+RT+Nagar+Bengaluru" target="_blank" rel="noopener" class="text-xs bg-brand-600 text-white font-bold px-3 py-1.5 rounded-lg inline-block">
+                                    Navigate Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-slate-900 text-white pt-12 pb-24 md:pb-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-brand-500 rounded-xl flex items-center justify-center font-bold text-white text-xl">
+                            SM
+                        </div>
+                        <span class="font-heading font-extrabold text-xl tracking-tight">S M FRESH MART</span>
+                    </div>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Formerly S M Food Palace. Your trusted one-stop neighborhood supermarket on Sultanpalya Main Road, Bengaluru.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-sm text-amber-400 mb-3">Quick Navigation</h4>
+                    <ul class="space-y-2 text-xs text-slate-300">
+                        <li><button onclick="showTab('home')" class="hover:text-white">Home</button></li>
+                        <li><button onclick="showTab('categories')" class="hover:text-white">Categories</button></li>
+                        <li><button onclick="showTab('order-builder')" class="hover:text-white">WhatsApp Order</button></li>
+                        <li><button onclick="showTab('offers')" class="hover:text-white">Daily Deals</button></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-sm text-amber-400 mb-3">Serving Areas</h4>
+                    <ul class="space-y-1.5 text-xs text-slate-400">
+                        <li>RT Nagar · Sultanpalya</li>
+                        <li>Dinnur · Kaval Bairasandra</li>
+                        <li>Hebbal · Manorayanapalya</li>
+                        <li>Ganga Nagar · JC Nagar</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-sm text-amber-400 mb-3">Store Hours</h4>
+                    <p class="text-xs text-slate-300 mb-1">Monday – Sunday:</p>
+                    <p class="text-xs font-semibold text-white">7:00 AM – 10:00 PM</p>
+                    <p class="text-xs text-slate-400 mt-3">Phone: 080 2333 9002</p>
+                </div>
+            </div>
+
+            <div class="pt-6 border-t border-slate-800 text-center text-xs text-slate-500">
+                <p>&copy; S M Fresh Mart (Formerly S M Food Palace). All rights reserved. Sultanpalya Main Rd, RT Nagar, Bengaluru.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Quick Button -->
+    <a href="https://wa.me/918023339002?text=Hi%20S%20M%20Fresh%20Mart,%20I%20have%20an%20inquiry%20regarding%20grocery%20items." target="_blank" rel="noopener" class="fixed bottom-20 right-4 md:bottom-6 md:right-6 z-40 w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full flex items-center justify-center text-2xl shadow-2xl transition-transform hover:scale-110">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Sticky Mobile Bottom Action Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 z-50 px-3 py-2 flex items-center justify-between shadow-lg">
+        <a href="tel:08023339002" class="flex-1 py-2 text-center border-r border-slate-200 text-slate-700 font-semibold text-xs flex flex-col items-center gap-1">
+            <i class="fa-solid fa-phone text-brand-600 text-base"></i> Call Store
+        </a>
+        <button onclick="showTab('order-builder')" class="flex-1 py-2 text-center border-r border-slate-200 text-slate-700 font-semibold text-xs flex flex-col items-center gap-1">
+            <i class="fa-brands fa-whatsapp text-emerald-600 text-base"></i> Quick Order
+        </button>
+        <a href="https://maps.google.com/?q=S+M+Fresh+Mart+Sultanpalya+Main+Rd+RT+Nagar+Bengaluru" target="_blank" rel="noopener" class="flex-1 py-2 text-center text-slate-700 font-semibold text-xs flex flex-col items-center gap-1">
+            <i class="fa-solid fa-location-arrow text-amber-500 text-base"></i> Directions
+        </a>
+    </div>
+
+    <script>
+        // Grocery Items Data Array
+        const groceryItems = [
+            { id: 1, name: "Fresh Tomatoes", category: "produce", price: 32, unit: "1 kg", icon: "fa-apple-whole" },
+            { id: 2, name: "Onions (A-Grade)", category: "produce", price: 38, unit: "1 kg", icon: "fa-carrot" },
+            { id: 3, name: "Potatoes", category: "produce", price: 28, unit: "1 kg", icon: "fa-seedling" },
+            { id: 4, name: "Nandini Fresh Milk (Blue)", category: "dairy", price: 24, unit: "500 ml", icon: "fa-cow" },
+            { id: 5, name: "Fresh Paneer Block", category: "dairy", price: 95, unit: "200 g", icon: "fa-cheese" },
+            { id: 6, name: "Sona Masoori Raw Rice", category: "staples", price: 58, unit: "1 kg", icon: "fa-bowl-rice" },
+            { id: 7, name: "Toor Dal (Premium)", category: "staples", price: 145, unit: "1 kg", icon: "fa-wheat-awn" },
+            { id: 8, name: "Sunflower Cooking Oil", category: "staples", price: 135, unit: "1 Litre", icon: "fa-bottle-droplet" },
+            { id: 9, name: "Aashirvaad Whole Wheat Atta", category: "staples", price: 240, unit: "5 kg", icon: "fa-box-archive" },
+            { id: 10, name: "Lays Chips (Classic)", category: "snacks", price: 20, unit: "Pack", icon: "fa-cookie" },
+            { id: 11, name: "Britannia Good Day Biscuits", category: "snacks", price: 30, unit: "Pack", icon: "fa-cookie-bite" },
+            { id: 12, name: "Brooke Bond Red Label Tea", category: "snacks", price: 160, unit: "250 g", icon: "fa-mug-hot" }
+        ];
+
+        // Global Cart State
+        let cart = {};
+
+        // Single Page App Tab Switching Logic
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.add('hidden'));
+            const targetTab = document.getElementById(`tab-${tabId}`);
+            if (targetTab) {
+                targetTab.classList.remove('hidden');
+            }
+
+            // Update Navigation active state
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                if (btn.getAttribute('data-tab') === tabId) {
+                    btn.classList.add('text-brand-600', 'font-semibold');
+                    btn.classList.remove('text-slate-600');
+                } else {
+                    btn.classList.remove('text-brand-600', 'font-semibold');
+                    btn.classList.add('text-slate-600');
+                }
+            });
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Toggle Mobile Navigation Drawer
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Render Category Grid Products
+        function renderCategoryProducts(filter = 'all') {
+            const grid = document.getElementById('products-grid');
+            if (!grid) return;
+
+            const filtered = filter === 'all'
+                ? groceryItems
+                : groceryItems.filter(item => item.category === filter);
+
+            grid.innerHTML = filtered.map(item => `
+                <div class="bg-white rounded-2xl p-5 shadow-sm hover:shadow-md border border-slate-200 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center text-xl mb-3">
+                            <i class="fa-solid ${item.icon}"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base">${item.name}</h3>
+                        <p class="text-xs text-slate-500 mt-0.5">Unit: ${item.unit}</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 mt-4 flex items-center justify-between">
+                        <span class="font-extrabold text-slate-900 text-lg">₹${item.price}</span>
+                        <button onclick="addToCart(${item.id}); showTab('order-builder');" class="px-3 py-1.5 bg-brand-600 hover:bg-brand-700 text-white rounded-xl text-xs font-bold transition-all flex items-center gap-2">
+                            <i class="fa-solid fa-cart-plus"></i> Add
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+
+            const filterButtons = document.querySelectorAll('[data-filter]');
+            filterButtons.forEach(button => {
+                const active = button.getAttribute('data-filter') === filter;
+                button.classList.toggle('active', active);
+                button.classList.toggle('bg-brand-600', active);
+                button.classList.toggle('text-white', active);
+                button.classList.toggle('shadow-sm', active);
+                button.classList.toggle('bg-white', !active);
+                button.classList.toggle('text-slate-700', !active);
+                button.classList.toggle('border', !active);
+                button.classList.toggle('border-slate-200', !active);
+            });
+        }
+
+        function filterCategory(filter) {
+            const categories = ['all', ...new Set(groceryItems.map(item => item.category))];
+            if (!categories.includes(filter)) {
+                return;
+            }
+            renderCategoryProducts(filter);
+        }
+
+        function checkDeliveryZone() {
+            const areaInput = document.getElementById('area-search-input');
+            const result = document.getElementById('zone-result-message');
+            const area = areaInput.value.trim();
+
+            result.classList.remove('hidden', 'bg-brand-50', 'text-brand-800', 'bg-amber-50', 'text-amber-800');
+            if (!area) {
+                result.textContent = 'Please enter your locality to check delivery availability.';
+                result.classList.add('bg-amber-50', 'text-amber-800');
+                areaInput.focus();
+                return;
+            }
+
+            const supportedAreas = [
+                'rt nagar',
+                'sultanpalya',
+                'dinnur',
+                'kaval bairasandra',
+                'hebbal',
+                'manorayanapalya',
+                'ganga nagar',
+                'jc nagar'
+            ];
+            const normalizedArea = area.toLowerCase();
+            const isSupported = supportedAreas.some(supportedArea => normalizedArea.includes(supportedArea));
+
+            result.textContent = isSupported
+                ? `Great news! ${area} is in our delivery area. Contact us at 080 2333 9002 to confirm your exact address.`
+                : `We could not confirm delivery to ${area}. Please contact us at 080 2333 9002 to check.`;
+            result.classList.add(isSupported ? 'bg-brand-50' : 'bg-amber-50');
+            result.classList.add(isSupported ? 'text-brand-800' : 'text-amber-800');
+        }
+
+        function addToCart(itemId) {
+            const item = groceryItems.find(entry => entry.id === itemId);
+            if (!item) return;
+
+            cart[itemId] = (cart[itemId] || 0) + 1;
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const countEl = document.getElementById('cart-count');
+            const cartItemsEl = document.getElementById('cart-items');
+            const subtotalEl = document.getElementById('cart-subtotal');
+            const orderItemCountEl = document.getElementById('cart-item-count');
+            const orderSelectedListEl = document.getElementById('cart-selected-list');
+            const orderTotalEl = document.getElementById('cart-estimated-total');
+            const navCartBadgeEl = document.getElementById('nav-cart-badge');
+            const mobileCartBadgeEl = document.getElementById('mobile-cart-badge');
+
+            const totalItems = Object.values(cart).reduce((sum, qty) => sum + qty, 0);
+            const subtotal = groceryItems.reduce((sum, item) => sum + (cart[item.id] || 0) * item.price, 0);
+
+            if (countEl) countEl.textContent = totalItems;
+            if (orderItemCountEl) orderItemCountEl.textContent = `${totalItems} ${totalItems === 1 ? 'Item' : 'Items'}`;
+            if (orderTotalEl) orderTotalEl.textContent = `₹${subtotal}`;
+
+            [navCartBadgeEl, mobileCartBadgeEl].forEach(badge => {
+                if (!badge) return;
+                badge.textContent = badge.id === 'mobile-cart-badge' ? `${totalItems} items` : totalItems;
+                badge.classList.toggle('hidden', totalItems === 0);
+            });
+
+            if (orderSelectedListEl) {
+                const selectedItems = groceryItems.filter(item => cart[item.id]);
+                orderSelectedListEl.innerHTML = selectedItems.length
+                    ? selectedItems.map(item => `
+                        <div class="flex items-center justify-between gap-3 border-b border-slate-100 py-2 last:border-0">
+                            <div class="min-w-0">
+                                <p class="font-semibold text-slate-800">${item.name}</p>
+                                <p class="text-xs text-slate-500">₹${item.price} × ${cart[item.id]} = ₹${item.price * cart[item.id]}</p>
+                            </div>
+                            <div class="flex shrink-0 items-center gap-2">
+                                <button type="button" onclick="changeCartQuantity(${item.id}, -1)" aria-label="Remove one ${item.name}" class="h-8 w-8 rounded-lg border border-slate-300 text-slate-700 hover:bg-slate-100">−</button>
+                                <span class="w-5 text-center font-bold">${cart[item.id]}</span>
+                                <button type="button" onclick="changeCartQuantity(${item.id}, 1)" aria-label="Add one ${item.name}" class="h-8 w-8 rounded-lg border border-slate-300 text-slate-700 hover:bg-slate-100">+</button>
+                            </div>
+                        </div>
+                    `).join('')
+                    : `<div class="py-8 text-center text-slate-400"><i class="fa-solid fa-cart-flatbed mb-2 text-3xl text-slate-300"></i><p class="text-xs">Your grocery list is empty.<br>Click '+' on items on the left to add!</p></div>`;
+            }
+
+            renderOrderBuilderItems();
+
+            if (cartItemsEl) {
+                if (!totalItems) {
+                    cartItemsEl.innerHTML = '<p class="text-sm text-slate-500">Your cart is empty.</p>';
+                } else {
+                    cartItemsEl.innerHTML = Object.entries(cart).map(([id, qty]) => {
+                        const item = groceryItems.find(entry => entry.id === Number(id));
+                        if (!item) return '';
+
+                        return `
+                            <div class="flex items-center justify-between gap-3 py-2 border-b border-slate-100 last:border-0">
+                                <div>
+                                    <p class="font-semibold text-slate-800 text-sm">${item.name}</p>
+                                    <p class="text-xs text-slate-500">₹${item.price} × ${qty}</p>
+                                </div>
+                                <span class="font-bold text-slate-800 text-sm">₹${item.price * qty}</span>
+                            </div>
+                        `;
+                    }).join('');
+                }
+            }
+
+            if (subtotalEl) subtotalEl.textContent = `₹${subtotal}`;
+        }
+
+        function renderOrderBuilderItems() {
+            const list = document.getElementById('cart-item-picker-list');
+            if (!list) return;
+
+            const searchTerm = (document.getElementById('cart-search-input')?.value || '').trim().toLowerCase();
+            const filteredItems = groceryItems.filter(item =>
+                `${item.name} ${item.category}`.toLowerCase().includes(searchTerm)
+            );
+
+            list.innerHTML = filteredItems.length
+                ? filteredItems.map(item => `
+                    <div class="flex items-center justify-between gap-3 rounded-xl border border-slate-200 p-3">
+                        <div class="flex min-w-0 items-center gap-3">
+                            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-50 text-brand-600"><i class="fa-solid ${item.icon}"></i></div>
+                            <div class="min-w-0">
+                                <p class="truncate text-sm font-bold text-slate-900">${item.name}</p>
+                                <p class="text-xs text-slate-500">${item.unit} · ₹${item.price}</p>
+                            </div>
+                        </div>
+                        <button type="button" onclick="changeCartQuantity(${item.id}, 1)" aria-label="Add ${item.name}" class="h-9 w-9 shrink-0 rounded-lg bg-brand-600 font-bold text-white hover:bg-brand-700">+</button>
+                    </div>
+                `).join('')
+                : '<p class="py-8 text-center text-sm text-slate-500">No items match your search.</p>';
+        }
+
+        function searchCartItems() {
+            renderOrderBuilderItems();
+        }
+
+        function changeCartQuantity(itemId, change) {
+            const nextQuantity = (cart[itemId] || 0) + change;
+            if (nextQuantity > 0) {
+                cart[itemId] = nextQuantity;
+            } else {
+                delete cart[itemId];
+            }
+            updateCartUI();
+        }
+
+        function sendWhatsAppOrder() {
+            const selectedItems = groceryItems.filter(item => cart[item.id]);
+            const nameInput = document.getElementById('cust-name');
+            const addressInput = document.getElementById('cust-address');
+            const notesInput = document.getElementById('cust-notes');
+            const customerName = nameInput.value.trim();
+            const deliveryAddress = addressInput.value.trim();
+
+            if (!selectedItems.length) {
+                alert('Please add at least one item to your order.');
+                return;
+            }
+            if (!customerName) {
+                alert('Please enter your name.');
+                nameInput.focus();
+                return;
+            }
+            if (!deliveryAddress) {
+                alert('Please enter your delivery address or locality.');
+                addressInput.focus();
+                return;
+            }
+
+            const estimatedTotal = selectedItems.reduce((sum, item) => sum + item.price * cart[item.id], 0);
+            const orderLines = selectedItems.map(item =>
+                `• ${item.name} (${item.unit}) x ${cart[item.id]} = ₹${item.price * cart[item.id]}`
+            );
+            const message = [
+                'Hi S M Fresh Mart, I would like to place this order:',
+                '',
+                ...orderLines,
+                '',
+                `Estimated total: ₹${estimatedTotal}`,
+                `Name: ${customerName}`,
+                `Delivery address: ${deliveryAddress}`,
+                notesInput.value.trim() ? `Notes: ${notesInput.value.trim()}` : ''
+            ].filter(Boolean).join('\n');
+
+            const whatsappUrl = `https://wa.me/918023339002?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCategoryProducts();
+            updateCartUI();
+        });
+
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+        }
